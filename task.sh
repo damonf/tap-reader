@@ -245,6 +245,15 @@ tidy_task()
     -type f \( -iname "*.cpp" -o -iname "*.hpp" \) \
     -print0 \
     | xargs -0 -P 4 -n 1 run-clang-tidy $args
+
+  # local files file
+  # while IFS= read -r -d '' file; do
+  #   files+=("$file")  # Accumulate files in an array
+  # done < <(find src tests \
+  #     -type f \( -iname "*.cpp" -o -iname "*.hpp" \) \
+  #     -print0)
+  #
+  # printf "%s\n" "${files[@]}" | xargs -I{} -P 4 run-clang-tidy $args {}
 }
 
 format_task()

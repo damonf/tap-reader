@@ -17,3 +17,4 @@ Checks: >
   -cppcoreguidelines-avoid-magic-numbers,
   -readability-magic-numbers,
   -performance-avoid-endl,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic,
